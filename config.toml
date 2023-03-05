@@ -14,6 +14,7 @@ theme = "FixIt"
   # FixIt 主题版本
   version = "0.2.X"
   description = "MoonOld古月 Blog"
+  favicon = "/favicon.ico"
     [params.header]
         desktopMode = "sticky"
     [params.header.title]
@@ -47,7 +48,7 @@ theme = "FixIt"
       # Gravatar 邮箱，用于优先在主页显示的头像
       #gravatarEmail = ""
       # 主页显示头像的 URL
-      avatarURL = "avatar.jpg"
+      avatarURL = "/avatar.png"
       # FixIt 0.2.17 | 新增 头像菜单链接的 identifier
       #avatarMenu = ""
       # FixIt 0.2.7 | 更改 主页显示的网站标题（支持 HTML 格式）
@@ -68,6 +69,13 @@ theme = "FixIt"
 
 [params.page]
     authorAvatar = true
+    #author = "MoonOld"
+    [params.page.code]
+        copy = true
+        maxShownLines = 10
+    [params.page.comment]
+        enable = true
+        [params.page.comment.artalk]
 
 
 [menu]
@@ -82,15 +90,76 @@ theme = "FixIt"
     url = "/categories/"
     title = ""
     weight = 2
+        [[menu.main]]
+        identifier = "test"
+        name ="test"
+        url = "/categories/test" 
+        parent = "categories"
   [[menu.main]]
     identifier = "tags"
     name = "标签"
     url = "/tags/"
     weight = 3
+        [[menu.main]]
+        identifier = "test1"
+        name = "test"
+        url = "/tags/test/"
+        parent = "tags"
+    [[menu.main]]
+        identifier = "about"
+        name = "关于 MoonOld"
+        url = ""
+        weight = 4
+    [[menu.main]]
+    identifier = "friends"
+    name = "友链"
+    url = "/friends/"
+    title = "友情链接"
+    weight = 21
+    parent = "about"
+        [menu.main.params]
+        icon = "fa-solid fa-users"
+
+[params.githubCorner]
+    enable = true
+    permalink = "https://github.com/hugo-fixit/FixIt"
+    title = "在 GitHub 上查看源代码"
+    position = "right" # ["left", "right"]
+
+ [params.backToTop]
+    enable = false
+    # 在 b2t 按钮中显示滚动百分比
+    scrollpercent = false
+
+[params.readingProgress]
+    enable = true
+    # 可用值：["left", "right"]
+    start = "left"
+    # 可用值：["top", "bottom"]
+    position = "top"
+    reversed = false
+    light = ""
+    dark = ""
+    height = "2px"
 
 # Hugo 解析文档的配置
 [markup]
   # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
   [markup.highlight]
-    # false 是必要的设置 (https://github.com/hugo-fixit/FixIt/issues/43)
+    ################## 必要的配置 ##################
+    # https://github.com/hugo-fixit/FixIt/issues/43
+    codeFences = true
+    lineNos = true
+    lineNumbersInTable = true
     noClasses = false
+    ################## 必要的配置 ##################
+    guessSyntax = true
+  # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+[author]
+  name = "MoonOld"
+  email = "MoonOld.h@gmail.com"
+  #link = ""
+  avatar = "/avatar.png"
