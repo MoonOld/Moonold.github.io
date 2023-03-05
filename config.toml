@@ -1,0 +1,96 @@
+title = "MoonOld Blog"
+baseURL = "http://localhost/"
+# 设置默认的语言 ["en", "zh-cn", "fr", "pl", ...]
+defaultContentLanguage = "zh-cn"
+# 网站语言, 仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
+languageCode = "zh-CN"
+# 是否包括中日韩文字
+hasCJKLanguage = true
+
+# 更改使用 Hugo 构建网站时使用的默认主题
+theme = "FixIt"
+
+[params]
+  # FixIt 主题版本
+  version = "0.2.X"
+  description = "MoonOld古月 Blog"
+    [params.header]
+        desktopMode = "sticky"
+    [params.header.title]
+        name = "MoonOld Blog"
+
+[params.footer]
+    enable = true
+    hugo = true
+    copyright = true
+    author = true
+    since = 2023
+    wordCount = true
+    [params.footer.order]
+        powered = 1
+        statistics = 2
+        visitor = 3
+
+[params.section]
+    paginate = 10
+    dateFormate = "2000-02-02"
+    [params.section.recentlyUpdated]
+        enable = true
+        days = 30
+        maxCount = 10
+[params.home]
+    # FixIt 0.2.0 | 新增 RSS 文章数目
+    rss = 10
+    # 主页个人信息
+    [params.home.profile]
+      enable = true
+      # Gravatar 邮箱，用于优先在主页显示的头像
+      #gravatarEmail = ""
+      # 主页显示头像的 URL
+      avatarURL = "avatar.jpg"
+      # FixIt 0.2.17 | 新增 头像菜单链接的 identifier
+      #avatarMenu = ""
+      # FixIt 0.2.7 | 更改 主页显示的网站标题（支持 HTML 格式）
+      #title = ""
+      # 主页显示的网站副标题
+      subtitle = "想给狂放的想法安个家"
+      # 是否为副标题显示打字机动画
+      typeit = true
+      # 是否显示社交账号
+      social = true
+      # FixIt 0.2.0 | 新增 免责声明（支持 HTML 格式）
+      disclaimer = ""
+    # 主页文章列表
+    [params.home.posts]
+      enable = false
+      # 主页每页显示文章数量
+      paginate = 6
+
+[params.page]
+    authorAvatar = true
+
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    identifier = "categories"
+    name = "分类"
+    url = "/categories/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 3
+
+# Hugo 解析文档的配置
+[markup]
+  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false 是必要的设置 (https://github.com/hugo-fixit/FixIt/issues/43)
+    noClasses = false
