@@ -6,6 +6,8 @@ defaultContentLanguage = "zh-cn"
 languageCode = "zh-CN"
 # 是否包括中日韩文字
 hasCJKLanguage = true
+enableGitInfo = true
+
 
 # 更改使用 Hugo 构建网站时使用的默认主题
 theme = "FixIt"
@@ -14,12 +16,15 @@ theme = "FixIt"
   # FixIt 主题版本
   version = "0.2.X"
   description = "MoonOld古月 Blog"
-  favicon = "/favicon.ico"
-    [params.header]
+    externalIcon = true
+[params.header]
         desktopMode = "sticky"
     [params.header.title]
         name = "MoonOld Blog"
-
+        logo = "/favicon-32x32.png"
+[params.social]
+    GitHub = "MoonOld"
+    Email = "MoonOld.h@gmail.com"
 [params.footer]
     enable = true
     hugo = true
@@ -27,6 +32,7 @@ theme = "FixIt"
     author = true
     since = 2023
     wordCount = true
+    visitor = true
     [params.footer.order]
         powered = 1
         statistics = 2
@@ -63,62 +69,90 @@ theme = "FixIt"
       disclaimer = ""
     # 主页文章列表
     [params.home.posts]
-      enable = false
+      enable = true
       # 主页每页显示文章数量
       paginate = 6
-
 [params.page]
     authorAvatar = true
+    readingTime = true
+    endFlag=""
+    autoBookmark = true
     #author = "MoonOld"
+    [params.page.toc]
+        enable = true
+        auto = true
+        position = "right"
     [params.page.code]
         copy = true
         maxShownLines = 10
     [params.page.comment]
         enable = true
         [params.page.comment.artalk]
+    [params.page.share]
+        Myspace = false
+        twitter = false
+        facebook = true
+        weibo = false
+        zhihu = true
+        Linkedin = true
+
+[params.typeit]
+    # typing speed between each step (measured in milliseconds)
+    speed = 100
+    # blinking speed of the cursor (measured in milliseconds)
+    cursorSpeed = 1000
+    # character used for the cursor (HTML format is supported)
+    cursorChar = "|"
+    # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
+    duration = -1
+[params.app]
+    # optional site title override for the app when added to an iOS home screen or Android launcher
+    title = "MoonOld Blog"
+    # whether to omit favicon resource links
+    noFavicon = false
+    # modern SVG favicon to use in place of older style .png and .ico files
+    svgFavicon = ""
+    # Safari mask icon color
+    iconColor = "#5bbad5"
+    # Windows v8-10 tile color
+    tileColor = "#da532c"
+    # FixIt 0.2.12 | CHANGED Android browser theme color
+    [params.app.themeColor]
+     # light = "#f8f8f8"
+     # dark = "#252627"
+[params.search]
+    enable = true
+    # type of search engine ["lunr", "algolia", "fuse"]
+    type = "lunr"
+    # max index length of the chunked content
+    contentLength = 4000
+    # placeholder of the search bar
+    placeholder = ""
+    # FixIt 0.2.1 | NEW max number of results length
+    maxResultLength = 10
+    # FixIt 0.2.3 | NEW snippet length of the result
+    snippetLength = 30
+    # FixIt 0.2.1 | NEW HTML tag name of the highlight part in results
+    highlightTag = "em"
+    # FixIt 0.2.4 | NEW whether to use the absolute URL based on the baseURL in search index
+    absoluteURL = false
+    [params.search.algolia]
+      index = ""
+      appID = ""
+      searchKey = ""
+    [params.search.fuse]
+      # FixIt 0.2.17 | NEW https://fusejs.io/api/options.html
+      isCaseSensitive = false
+      minMatchCharLength = 2
+      findAllMatches = false
+      location = 0
+      threshold = 0.3
+      distance = 100
+      ignoreLocation = false
+      useExtendedSearch = false
+      ignoreFieldNorm = false
 
 
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "文章"
-    url = "/posts/"
-    weight = 1
-  [[menu.main]]
-    identifier = "categories"
-    name = "分类"
-    url = "/categories/"
-    title = ""
-    weight = 2
-        [[menu.main]]
-        identifier = "test"
-        name ="test"
-        url = "/categories/test" 
-        parent = "categories"
-  [[menu.main]]
-    identifier = "tags"
-    name = "标签"
-    url = "/tags/"
-    weight = 3
-        [[menu.main]]
-        identifier = "test1"
-        name = "test"
-        url = "/tags/test/"
-        parent = "tags"
-    [[menu.main]]
-        identifier = "about"
-        name = "关于 MoonOld"
-        url = ""
-        weight = 4
-    [[menu.main]]
-    identifier = "friends"
-    name = "友链"
-    url = "/friends/"
-    title = "友情链接"
-    weight = 21
-    parent = "about"
-        [menu.main.params]
-        icon = "fa-solid fa-users"
 
 [params.githubCorner]
     enable = true
@@ -162,4 +196,62 @@ theme = "FixIt"
   name = "MoonOld"
   email = "MoonOld.h@gmail.com"
   #link = ""
-  avatar = "/avatar.png"
+  avatar = "/avatar.jpg"
+
+[frontmatter]
+  lastmod = [":git", "lastmod", ":fileModTime", ":default"]
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 3
+  [[menu.main]]
+    identifier = "categories"
+    name = "分类"
+    url = "/categories/"
+    title = ""
+    weight = 1
+        [[menu.main]]
+        identifier = "music"
+        name ="音乐"
+        url = "/categories/音乐" 
+        parent = "categories"
+        [[menu.main]]
+        identifier = "env"
+        name ="环境搭建"
+        url = "/categories/环境搭建" 
+        parent = "categories"
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 2
+        [[menu.main]]
+        identifier = "test1"
+        name = "test"
+        url = "/tags/test/"
+        parent = "tags"
+    [[menu.main]]
+        identifier = "about"
+        name = "关于 MoonOld"
+        url = "/about"
+        weight = 4
+    [[menu.main]]
+    identifier = "friends"
+    name = "友链"
+    url = "/friends/"
+    title = "友情链接"
+    weight = 21
+    parent = "about"
+        [menu.main.params]
+        icon = "fa-solid fa-users"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]
