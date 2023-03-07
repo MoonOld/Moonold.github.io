@@ -3,6 +3,7 @@ title: "使用Hugo搭建Fix it主题博客"
 subtitle: "记录搭建这个博客过程的一些细节和坑点"
 draft: true
 descriprion: this is a test md
+type : posts
 keywords: abc
 tags:
 - Hugo
@@ -11,6 +12,10 @@ tags:
 
 categories:
 - 环境搭建
+
+resources:
+    - name: laptop
+      src: laptop.jpg
 ---
 
 

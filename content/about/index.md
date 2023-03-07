@@ -1,16 +1,15 @@
 ---
 title: "About"
 subtitle: "以我观我"
-draft: true
+draft: false
 type: posts
 date: 2023-03-07T18:26:02.18+0800
 description: 一篇自我介绍
-resources:
-    - name: laptop
-    - src: laptop.jpg
+featuredImage: inWinter.jpg
+featuredImagePreview: laptop.jpg
 toc: 
     auto: false
-
+lightgallery: true
 tags: 
 - "思考"
 - "人生"
@@ -21,8 +20,6 @@ tags:
 {{< admonition  a 我是什么>}}
 一个想法无限多却软弱的普通人。
 {{< /admonition >}}
-### todo list:
-* backgroundPic
 
 {{< music url="/music/sincerely.mp3" name=Sincerely artist=TRUE cover="/images/sincerely.jpg" >}}
 ## 近期
