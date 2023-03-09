@@ -20,9 +20,8 @@ subtitle: "this is a subtitle"
 draft: true
 type: post
 descriprion: this is a test md
-resources:(这个用来引入封面图片)
-  - name: featured-image
-    src: featured-image.png
+featuredImage: inWinter.jpg
+featuredImagePreview: laptop.jpg
 keywords: abc
 tags:
 - test
