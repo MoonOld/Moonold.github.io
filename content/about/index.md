@@ -10,6 +10,7 @@ featuredImagePreview: laptop.jpg
 toc: 
     auto: false
 lightgallery: true
+weight: 0
 tags: 
 - "思考"
 - "人生"
