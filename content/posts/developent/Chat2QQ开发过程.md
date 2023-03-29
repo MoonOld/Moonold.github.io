@@ -9,6 +9,8 @@ tags:
 - "人生"
 - "总结"
 - "白学家"
+lightgallery : true
+
 
 ---
 

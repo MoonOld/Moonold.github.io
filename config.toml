@@ -233,11 +233,6 @@ theme = "FixIt"
     name = "标签"
     url = "/tags/"
     weight = 2
-        [[menu.main]]
-        identifier = "test1"
-        name = "test"
-        url = "/tags/test/"
-        parent = "tags"
     [[menu.main]]
         identifier = "about"
         name = "关于 MoonOld"
