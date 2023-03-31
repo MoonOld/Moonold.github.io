@@ -30,3 +30,9 @@ categories:
 {{< admonition  a 我是什么>}}
 一个想法无限多却软弱的普通人。
 {{< /admonition >}}
+
+
+
+Todolist
+* 支持评论
+* 完善Hugo搭建
