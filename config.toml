@@ -217,6 +217,12 @@ theme = "FixIt"
     url = "/categories/"
     title = ""
     weight = 1
+    [[menu.main]]
+        identifier = "Lab"
+        name ="Lab"
+        url = "/categories/lab"
+        parent = "categories"
+        weight = 1
         [[menu.main]]
         identifier = "music"
         name ="音乐"
