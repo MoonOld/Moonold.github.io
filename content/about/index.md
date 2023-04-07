@@ -7,6 +7,8 @@ date: 2023-03-07T18:26:02.18+0800
 description: 一篇自我介绍
 featuredImage: inWinter.jpg
 featuredImagePreview: laptop.jpg
+hiddenFromHomePage: true
+hiddenFromSearch: false
 toc: 
     auto: false
 lightgallery: true

@@ -14,12 +14,12 @@ tags:
   - 虚函数
 categories:
   - 计算机原理
-featuredImage: /images/featuredImage.jpg
+featuredImage: /images/branch.jpg
 resources:
   - name: featured-image
-    src: /images/featuredImage.jpg
+    src: /images/branch.jpg
   - name: featured-image-preview
-    src: /images/featuredImage.jpg
+    src: /images/branch.jpg
 toc: true
 lightgallery: true
 

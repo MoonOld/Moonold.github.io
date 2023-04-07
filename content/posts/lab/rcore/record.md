@@ -6,7 +6,6 @@ draft: false
 description: 记录一下自己的留级rcore
 keywords:
 comment: false
-weight: 0
 tags:
   - rust
   - os
