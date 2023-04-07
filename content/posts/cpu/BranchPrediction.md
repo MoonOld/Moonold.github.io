@@ -6,7 +6,6 @@ draft: false
 type: posts
 description: 记录水群中学到的一个CPU机制
 keywords: CPU
-comment: false
 tags:
   - CPU
   - 分支预测

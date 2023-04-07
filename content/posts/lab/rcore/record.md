@@ -5,7 +5,6 @@ date: 2023-04-04T12:11:16+08:00
 draft: false
 description: 记录一下自己的留级rcore
 keywords:
-comment: false
 tags:
   - rust
   - os

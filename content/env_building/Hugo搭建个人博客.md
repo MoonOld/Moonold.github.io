@@ -1,7 +1,7 @@
 ---
 title: "使用Hugo搭建Fix it主题博客"
 subtitle: "记录搭建这个博客过程的一些细节和坑点"
-draft: true
+draft: false
 descriprion: this is a test md
 date: 2023-03-06T23:55:17+08:00
 type : posts
@@ -331,7 +331,19 @@ lightgallery : true
 具体配置可以查看[Hugo官网链接](https://gohugo.io/content-management/front-matter/)或者开头提到的FixIt文档，或者你自己选择的那个主题所提供的文档去详细参阅。我个人其实比较推荐，去看一下总体提供什么功能，自己用到的时候能知道有什么自己需要的，再去详细查看即可。以下收集一些自己用到的Option。
 
 * lightgallery true可以在外面显示avatar
-* hugo summary默认截取前70个字符进行摘要显示（在home），或者以```<!--more-->```来标记之前的内容形成摘要。
+* hugo summary默认截取前70个字符进行摘要显示（在home），或者以 ***<\!--more-->*** 来标记之前的内容形成摘要。
+
+## 评论系统
+一般Hugo主题都会提供评论系统的支持。以我选择的Fixit主题为例，可以在```params.page.comment```中进行评论系统的配置。  
+
+主流的评论系统giscus\utterancs\commento等。giscus通过github repo的discussions获取评论数据，所以在github page上可以非常简单的应用。下面以选择giscus进行配置为例，可以大致列出流程。
+* 在Github Settings里中的Applications进行giscus的安装
+* 在Settings中进入giscus应用的配置页面，将目标仓库的访问权限给予giscus
+* 为目标仓库开启discussions模块
+* 在[giscus网站](https://giscus.app/zh-CN)上获取配置，在这里可以顺便检测自己仓库是否可以用来使用giscus
+* 将最后生成的配置填入自己主题的config选项中，包括mapping、repo、category等配置  
+
+需要注意Front Matter中有```comment:```选项，此项为false时禁用评论系统。
 
 ## 踩坑点记录
 * 用edge没有正确显示icon,调试了很多次才发现。最后决定一直用chrome了

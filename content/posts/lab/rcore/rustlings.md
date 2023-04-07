@@ -4,8 +4,7 @@ subtitle: 将做Rustlings过程中觉得疑惑或者有趣的地方单独列出�
 date: 2023-04-07T14:03:22+08:00
 draft: false
 description: 将做Rustlings过程中觉得疑惑或者有趣的地方单独列出来
-keywords: 
-comment: false
+keywords: rust
 tags:
   - Rust
 categories:

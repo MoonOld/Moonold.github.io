@@ -95,7 +95,6 @@ theme = "FixIt"
         categoryId = "DIC_kwDOJGe7Zc4CVm_a"
         mapping = "pathname"
         strict = "0" # FixIt 0.2.18 | 新增
-        term = ""
         reactionsEnabled = "1"
         emitMetadata = "0"
         inputPosition = "top" # ["top", "bottom"]
