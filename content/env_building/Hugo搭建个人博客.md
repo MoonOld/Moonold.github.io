@@ -331,6 +331,7 @@ lightgallery : true
 具体配置可以查看[Hugo官网链接](https://gohugo.io/content-management/front-matter/)或者开头提到的FixIt文档，或者你自己选择的那个主题所提供的文档去详细参阅。我个人其实比较推荐，去看一下总体提供什么功能，自己用到的时候能知道有什么自己需要的，再去详细查看即可。以下收集一些自己用到的Option。
 
 * lightgallery true可以在外面显示avatar
+* hugo summary默认截取前70个字符进行摘要显示（在home），或者以```<!--more-->```来标记之前的内容形成摘要。
 
 ## 踩坑点记录
 * 用edge没有正确显示icon,调试了很多次才发现。最后决定一直用chrome了

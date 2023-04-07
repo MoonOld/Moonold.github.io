@@ -14,9 +14,7 @@ toc: true
 lightgallery: true
 # See details front matter: https://fixit.lruihao.cn/documentation/content/#front-matter
 ---
-
-
-
+<!--more-->
 
 ## Ownership
 在```./exercises/vecs/vecs1.rs```中
@@ -131,4 +129,3 @@ macro_rules! my_macro {
 按照[decl-marcos](https://veykril.github.io/tlborm/decl-macros/macros-methodical.html#macro_rules)解释， ***As noted previously, macro_rules! is itself a syntax extension, meaning it is technically not part of the Rust syntax. It uses the following forms*** 也就是必须要在每个匹配的rule后加分号，这是```macro_rules!```自己的规则，与rust语法中模式匹配是不兼容的。具体语法参见[Macros By Example](https://doc.rust-lang.org/reference/macros-by-example.html)
 
 最后想说一句，Rustlings提供了from和into的traits实现题目，这实在是太聪明的决定了。能够独立完成这两个题目，就已经是具备了初步编码rust的能力了。
-<!--more-->

@@ -86,8 +86,22 @@ theme = "FixIt"
         copy = true
         maxShownLines = 10
     [params.page.comment]
+      enable = true
+      [params.page.comment.giscus]
         enable = true
-        [params.page.comment.artalk]
+        repo = "MoonOld/Moonold.github.io"
+        repoId = "R_kgDOJGe7ZQ"
+        category = "Announcements"
+        categoryId = "DIC_kwDOJGe7Zc4CVm_a"
+        mapping = "pathname"
+        strict = "0" # FixIt 0.2.18 | 新增
+        term = ""
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "top" # ["top", "bottom"]
+        lightTheme = "light"
+        darkTheme = "dark"
+        lazyLoad = true
     [params.page.share]
         Myspace = false
         twitter = false
@@ -177,6 +191,7 @@ theme = "FixIt"
     height = "2px"
 
 # Hugo 解析文档的配置
+
 [markup]
   # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
   [markup.highlight]
