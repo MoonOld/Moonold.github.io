@@ -169,8 +169,8 @@ theme = "FixIt"
 
 [params.githubCorner]
     enable = true
-    permalink = "https://github.com/hugo-fixit/FixIt"
-    title = "在 GitHub 上查看源代码"
+    permalink = "https://github.com/MoonOld"
+    title = "MoonOld的Github"
     position = "right" # ["left", "right"]
 
  [params.backToTop]
