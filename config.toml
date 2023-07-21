@@ -243,6 +243,11 @@ theme = "FixIt"
         url = "/categories/音乐" 
         parent = "categories"
         [[menu.main]]
+        identifier = "tech"
+        name ="技术"
+        url = "/categories/tech" 
+        parent = "categories"
+        [[menu.main]]
         identifier = "env"
         name ="环境搭建"
         url = "/categories/环境搭建" 
